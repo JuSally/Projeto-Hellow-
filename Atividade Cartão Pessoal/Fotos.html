@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link rel="icon" type="imagem/x-icon" href="Imagens Cartão Apresentação/Sparkle.ico">
+    <style>
+        body {
+            background-color: rgb(255, 215, 197);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+
+        .h1 {
+            text-align: center;
+        }
+
+        button {
+            background-color: rgb(212, 125, 125);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            padding: 1% 2%;
+            /* o padding vai mexer no botão como o width e o heigth mexem na imagem (porcentagem deixa responsivo)*/
+            border-radius: 24px 24px;
+            border: 1px solid rgb(212, 125, 125);
+            transition-duration: 0.5s;
+            /* transition-duration representa quanto tempo tem a animação (hover) */
+        }
+
+        button:hover {
+            /* tudo o que é colocado no hover aparece depois de passar o cursor em cima do botão  */
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            /* box-shadow é para sombra */
+            background-color: rgb(129, 76, 76);
+            border: 1px solid rgb(129, 76, 76);
+            opacity: 0.7;
+            cursor: pointer;
+            /* se colocar a cor do border aqui a borda vai mudar junto com o fundo do botão. -SEMPRE COLOCAR BORDER NO SOLID- */
+            color: white;
+            /* o color dentro do hover indica de que cor a fonte vai ficar */
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #galeria>div {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            box-sizing: border-box;
+            top: 1px;
+            left: 25%;
+            right: 25%;
+        }
+
+        .foto img {
+            width: 70%;
+            display: block;
+        }
+
+        .detalhes {
+            display: none;
+        }
+
+        /* agora para dar a funcionalidade de abrir a imagem, utiliza-se a propriedade target */
+
+        #galeria .foto:target {
+            position: absolute;
+            width: 40%;
+            padding-left: 2%;
+            padding-inline-end: 2%;
+            padding-top: 1%;
+            top: 25%;
+            left: 30%;
+            right: 10%;
+            border: solid 1px #000;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        /* na URL quando se clica numa das fotos (sem o target) aperece o #1,#2 etc. Com o target consegue-se manipular essa "abertura" */
+
+        .foto:target .detalhes {
+            display: block;
+        }
+
+        hr {
+            border-color: rgb(255, 121, 121);
+            box-shadow: none;
+            border-top: 1px solid rgb(255, 121, 121);
+            background-color: rgb(255, 121, 121);
+        }
+        h1{
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <h1>Fotos com Família e Amigos👨‍👩‍👧❤️😎✨</h1>
+    <hr>
+    <div id="galeria">
+        <!-- estrutura -->
+        <div class="foto" id="foto1">
+            <a href="#foto1">
+                <img src="Imagens Cartão Apresentação/20220702_184524_HDR.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto3">
+            <a href="#foto3">
+                <img src="Imagens Cartão Apresentação/20230314_140250.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto4">
+            <a href="#foto4">
+                <img src="Imagens Cartão Apresentação/IMG_20231116_174754206.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto5">
+            <a href="#foto5">
+                <img src="Imagens Cartão Apresentação/IMG_20231122_055316.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto6">
+            <a href="#foto6">
+                <img src="Imagens Cartão Apresentação/IMG_20231122_060838.jpg" alt="a">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto7">
+            <a href="#foto7">
+                <img src="Imagens Cartão Apresentação/IMG_20231122_085247017_HDR.jpg" alt="b">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto14">
+            <a href="#foto14">
+                <img src="Imagens Cartão Apresentação/IMG-20190512-WA0059.jpg" alt="d">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto15">
+            <a href="#foto15">
+                <img src="Imagens Cartão Apresentação/IMG-20240122-WA0007.jpg" alt="e">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto2">
+            <a href="#foto2">
+                <img src="Imagens Cartão Apresentação/20230314_134625.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto8">
+            <a href="#foto8">
+                <img src="Imagens Cartão Apresentação/IMG_20231122_085842597_HDR.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto11">
+            <a href="#foto11">
+                <img src="Imagens Cartão Apresentação/IMG_20240225_185601981.jpg" alt="">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <!-- estrutura -->
+        <div class="foto" id="foto12">
+            <a href="#foto12">
+                <img src="Imagens Cartão Apresentação/IMG_20240326_170650190.jpg" alt="c">
+            </a>
+            <div class="detalhes">
+                <a href="#fechar"><button>X</button>
+                </a>
+            </div>
+        </div>
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+    </div>
+    <div style="text-align: left;">
+        <p> <span style="color: rgb(255, 218, 176);">uva</span> </p>
+        <a href="Cartão Pessoal.html">
+            <button>Voltar⬅️</button>
+        </a>
+        <a href="https://music.youtube.com/watch?v=cULQhvuq1Zc&list=OLAK5uy_meeJQOG6WFsN6T-1pvyaUC8yTSphLVyjU">
+            <img src="Imagens/Imagens Cartão Apresentação/GUAXINIM.gif" alt="guaxinim dançando"
+                style="width: 10%; height: 10%; border-radius: 50%;">
+        </a>
+    </div>
+</body>
+
+</html>
